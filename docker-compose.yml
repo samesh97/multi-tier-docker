@@ -1,0 +1,19 @@
+version: "3"
+services:
+
+
+  client :
+    image: todo-client
+    container_name: "todo-client"
+    ports:
+      - "3000:3000"
+    build: ./Client
+    depends_on:
+      - api
+
+  api:
+    image: todo-api
+    container_name: "todo-api"
+    ports:
+      - "5000:5000"
+    build: ./Api

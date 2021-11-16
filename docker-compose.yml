@@ -1,7 +1,5 @@
 version: "3"
 services:
-
-
   client :
     image: todo-client
     container_name: "todo-client"
@@ -10,7 +8,7 @@ services:
     build: ./Client
     depends_on:
       - api
-
+      -
   api:
     image: todo-api
     container_name: "todo-api"
